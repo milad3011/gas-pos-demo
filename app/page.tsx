@@ -71,7 +71,7 @@ export default function Page() {
     <main className="page" dir="rtl">
       <section className="top no-print">
         <div>
-          <h1>نظام بيع الغاز</h1>
+          <h1> Gas POS Demo</h1>
           <p>ديمو POS للتابلت / الآيفون</p>
         </div>
 
