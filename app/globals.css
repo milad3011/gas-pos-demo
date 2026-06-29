@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f5f7;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  padding: 20px;
+  color: #111827;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+.top p {
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 18px;
+}
+
+.products,
+.invoice {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.product {
+  min-height: 110px;
+  border: 1px solid #e5e7eb;
+  background: #fffbea;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product b {
+  color: #b45309;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.danger {
+  background: #ef4444;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.invoiceHeader {
+  text-align: center;
+  border-bottom: 1px dashed #bbb;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.label,
+.discount {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px;
+  text-align: right;
+}
+
+.empty {
+  text-align: center;
+  color: #6b7280;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.actions button {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #111827;
+  color: white;
+  font-size: 20px;
+}
+
+.totals {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.totals div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.grand {
+  border-top: 2px solid #111827;
+  padding-top: 12px;
+  font-size: 24px !important;
+}
+
+.print {
+  width: 100%;
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #facc15;
+  color: #111827;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.print-only {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product {
+    min-height: 95px;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block;
+  }
+
+  .page {
+    padding: 0;
+  }
+
+  .grid {
+    display: block;
+  }
+
+  .invoice {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+  }
+}
