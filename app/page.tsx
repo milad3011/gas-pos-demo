@@ -255,13 +255,11 @@ export default function Page() {
 
       <header className="posHeader no-print">
         <div>
-          <h1>غازات المجيد</h1>
-          <p>نقطة بيع تجريبية - Offline POS</p>
+         <h1>Gas POS</h1>
+        <p>نقطة بيع غازات المجيد</p>
         </div>
-
         <div className="headerStats">
-          <span>المبيعات: {total} ₪</span>
-          <span>الربح: {profit} ₪</span>
+          <span>آخر مزامنة: الآن</span>
         </div>
       </header>
 
